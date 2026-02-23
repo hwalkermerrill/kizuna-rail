@@ -137,12 +137,12 @@
 				<div class="summary-row">
 					<span class="summary-label">Price per Ticket:</span>
 					<span class="summary-value"
-						id="pricePerTicket"><%= ticketOptions && ticketOptions[0] ? '¥' + Number(ticketOptions[0].price).toLocaleString() : '¥14,400' %></span>
+						id="pricePerTicket"><%= ticketOptions && ticketOptions[0] ? '$' + Number(ticketOptions[0].price).toLocaleString() : '$14,400' %></span>
 				</div>
 				<div class="summary-row total">
 					<span class="summary-label">Total Amount:</span>
 					<span class="summary-value"
-						id="totalAmount"><%= ticketOptions && ticketOptions[0] ? '¥' + Number(ticketOptions[0].price).toLocaleString() : '¥14,400' %></span>
+						id="totalAmount"><%= ticketOptions && ticketOptions[0] ? '$' + Number(ticketOptions[0].price).toLocaleString() : '$14,400' %></span>
 				</div>
 			</div>
 		</section>
