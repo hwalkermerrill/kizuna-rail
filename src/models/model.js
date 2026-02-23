@@ -1,5 +1,5 @@
 // Imports
-import { generateConfirmationCode } from "../includes/helpers.js";
+import { generateConfirmationCode, yenToUsd } from "../includes/helpers.js";
 import { getDb as db } from "./db-in-file.js";
 
 // Constants
@@ -180,7 +180,7 @@ export const getTicketOptionsForRoute = async (routeId) => {
 	return db().ticketClasses.map(tc => ({
 		class: tc.class,
 		name: tc.name,
-		price: route.distance * tc.pricePerKm,
+		price: Math.round(yenToUsd(route.distance * tc.pricePerKm) * 100) / 100, // Round to 2 decimal places
 		amenities: tc.amenities,
 		description: tc.description
 	}));

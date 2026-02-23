@@ -22,7 +22,7 @@ const kmToMiles = (km) => {
  * @returns {number} The equivalent amount in US Dollars.
  */
 const yenToUsd = (yen) => {
-	const exchangeRate = 0.0065; // Example rate: 1 Yen = 0.0065 USD 2/23/26
+	const exchangeRate = 0.007; // Example rate: 1 Yen = 0.0065 USD as of 2/23/26, balanced to 0.007 for advantage pricing while in flux.
 	return yen * exchangeRate;
 };
 
